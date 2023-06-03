@@ -1,6 +1,9 @@
 <app-task-form (taskAdded)="onTaskAdded($event)"></app-task-form>
 <div *ngFor="let task of tasks">
-    <h3>{{ task.title }}</h3>
+  <ul nz-list>
+    <li nz-list-item>{{ task.title }}</li>
     <p>{{ task.description }}</p>
+  </ul>
+    
     <button (click)="deleteTask(task)">Delete</button>
   </div>

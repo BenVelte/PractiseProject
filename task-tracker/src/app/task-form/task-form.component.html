@@ -1,6 +1,18 @@
-<form (submit)="addTask()">
-    <input type="text" [(ngModel)]="title" placeholder="Task Title" name="title">
-    <input type="text" [(ngModel)]="description" placeholder="Task Description" name="description">
-    <button type="submit">Add Task</button>
+<form nz-form [nzLayout]="'vertical'" (submit)="addTask()">
+  <nz-form-item>
+    <nz-form-label id="input">Title</nz-form-label>
+    <nz-form-control [nzSpan]="5">
+      <input nz-input type="text" [(ngModel)]="title" placeholder="Task Title" name="title" id="input">
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item>
+    <nz-form-label id="input">Description</nz-form-label>
+    <nz-form-control [nzSpan]="5">
+      <input nz-input type="text" [(ngModel)]="description" placeholder="Task Description" name="description" id="input">
+    </nz-form-control>
+  </nz-form-item>
+    
+  <button nz-button nzType="primary" nzShape="circle" id="addButton" type="submit">Add</button>
+
   </form>
-  

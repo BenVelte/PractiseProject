@@ -1,0 +1,16 @@
+#title {
+    text-align: center;
+    position: relative;
+}
+
+#addButton {
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    text-align: center;
+    left: 15rem;
+}
+#input {
+    position: relative;
+    left: 2rem;
+}
