@@ -12,11 +12,11 @@ export class TaskFormComponent implements OnInit {
 
   @Output() taskAdded = new EventEmitter<Task>();
 
+  // Add Task to list
   addTask(): void {
     if (this.title && this.description) {
       const task: Task = { title: this.title, description: this.description };
       this.taskAdded.emit(task);
-      console.log(task);
       this.title = '';
       this.description = '';
     }
