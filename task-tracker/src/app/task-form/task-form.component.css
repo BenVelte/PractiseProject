@@ -1,16 +1,25 @@
 #title {
     text-align: center;
     position: relative;
+    width: auto;
 }
 
 #addButton {
     position: relative;
     width: 3rem;
     height: 3rem;
-    text-align: center;
-    left: 15rem;
+    float: left;
 }
 #input {
     position: relative;
-    left: 2rem;
+    width: auto;
+}
+input {
+    border-radius: 25px;
+}
+
+#formTask {
+    position: relative;
+    left: 5rem;
+    width: fit-content;
 }

@@ -1,18 +1,18 @@
-<form nz-form [nzLayout]="'vertical'" (submit)="addTask()">
+<form nz-form [nzLayout]="'vertical'" (submit)="addTask()" id="formTask">
   <nz-form-item>
-    <nz-form-label id="input">Title</nz-form-label>
+    <nz-form-label id="input"><h2>Title</h2></nz-form-label>
     <nz-form-control [nzSpan]="5">
-      <input nz-input type="text" [(ngModel)]="title" placeholder="Task Title" name="title" id="input">
+      <input nz-input type="text" [nzSize] ="'large'" [(ngModel)]="title" placeholder="Task Title" name="title" id="input">
     </nz-form-control>
   </nz-form-item>
 
   <nz-form-item>
-    <nz-form-label id="input">Description</nz-form-label>
+    <nz-form-label id="input"><h2>Description</h2></nz-form-label>
     <nz-form-control [nzSpan]="5">
-      <input nz-input type="text" [(ngModel)]="description" placeholder="Task Description" name="description" id="input">
+      <input nz-input type="text" [nzSize] ="'large'" [(ngModel)]="description" placeholder="Task Description" name="description" id="input">
     </nz-form-control>
   </nz-form-item>
     
-  <button nz-button nzType="primary" nzShape="circle" id="addButton" type="submit">Add</button>
+  <button nz-button nzType="primary" nzShape="circle" id="addButton" type="submit"><span nz-icon nzType="plus" nzTheme="outline"></span></button>
 
   </form>

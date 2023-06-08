@@ -8,7 +8,11 @@ import { Task } from '../task';
   
 })
 export class TaskListComponent implements OnInit {
-  tasks: Task[] = [];
+  tasks: Task[] = [
+    { title:"Title 1", description:"Description 1" },
+    { title:"Title 2", description:"Description 2" },
+    { title:"Title 3", description:"Description 3" }
+  ];
 
   deleteTask(task: Task): void {
     this.tasks = this.tasks.filter(t => t !== task);

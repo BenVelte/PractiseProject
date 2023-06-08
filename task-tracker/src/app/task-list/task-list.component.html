@@ -1,9 +1,14 @@
+<form nz-form [nzLayout]="'vertical'" id="formList">
+  <nz-form-item *ngFor="let task of tasks">
+    <nz-form-control>
+      <nz-list id="itemList">
+        <nz-list-item><h3>{{ task.title }}</h3></nz-list-item>
+        <span id="descriptionText">{{ task.description }}</span>
+
+        <button nz-button nzType="primary" nzShape="circle" nzDanger (click)="deleteTask(task)"  id="deleteButton"><span nz-icon nzType="close" nzTheme="outline"></span></button>  
+      </nz-list>
+    </nz-form-control>
+  </nz-form-item>
+</form>
+
 <app-task-form (taskAdded)="onTaskAdded($event)"></app-task-form>
-<div *ngFor="let task of tasks">
-  <ul nz-list>
-    <li nz-list-item>{{ task.title }}</li>
-    <p>{{ task.description }}</p>
-  </ul>
-    
-    <button (click)="deleteTask(task)">Delete</button>
-  </div>
